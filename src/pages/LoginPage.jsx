@@ -27,17 +27,17 @@ function LoginPage(props) {
       .then((response) => {
       // Request to the server's endpoint `/auth/login` returns a response
       // with the JWT string ->  response.data.authToken
-        console.log('JWT token', );//removed : response.data.authToken 
+        console.log('JWT token',response.data.authToken); 
         // storeToken() // this will store the token in localStorage  , remove the (response.data.authToken )
-      })
-      .then(()=> {
+        localStorage.setItem('authToken', response.data.authToken);
+      
         // authenticateUser() // update the auth state variables accordingly
         navigate('/');                             // <== ADD   
       })
-      // .catch((error) => {
-      //   const errorDescription = error.response.data.message;
-      //   setErrorMessage(errorDescription);
-      // })
+      .catch((error) => {
+        const errorDescription = error.response.data.message;
+        setErrorMessage(errorDescription);
+      });
   };
 
   

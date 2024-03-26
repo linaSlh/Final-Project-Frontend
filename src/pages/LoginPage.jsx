@@ -18,7 +18,29 @@ function LoginPage(props) {
   const handlePassword = (e) => setPassword(e.target.value);
 
   
-  const handleLoginSubmit = (e) => {};
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    const requestBody = { email, password };
+ 
+    axios.post(`${API_URL}/auth/login`, requestBody)
+    // authService.login(requestBody)
+      .then((response) => {
+      // Request to the server's endpoint `/auth/login` returns a response
+      // with the JWT string ->  response.data.authToken
+        console.log('JWT token', );//removed : response.data.authToken 
+        // storeToken() // this will store the token in localStorage  , remove the (response.data.authToken )
+      })
+      .then(()=> {
+        // authenticateUser() // update the auth state variables accordingly
+        navigate('/');                             // <== ADD   
+      })
+      // .catch((error) => {
+      //   const errorDescription = error.response.data.message;
+      //   setErrorMessage(errorDescription);
+      // })
+  };
+
+  
   
   return (
     <div className="LoginPage">

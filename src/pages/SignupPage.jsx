@@ -23,7 +23,7 @@ function SignupPage() {
   const handleSignupSubmit = (e) => {
     e.preventDefault();
     // Create an object representing the request body
-    const requestBody = { email, password, name };
+    const requestBody = { email, password, username:name };
  
     // Make an axios request to the API
     // If the POST request is a successful redirect to the login page
@@ -41,7 +41,7 @@ function SignupPage() {
     //     navigate('/');
     //   })
       .catch((error) => {
-        const errorDescription = error.response.data.message;
+        const errorDescription = error.response;
         setErrorMessage(errorDescription);
       })
   };

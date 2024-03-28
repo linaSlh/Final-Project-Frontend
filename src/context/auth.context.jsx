@@ -53,6 +53,28 @@ function AuthProviderWrapper(props) {
   useEffect(() => {
     authenticateUser();
   }, []);
+// // Fetch user's profile after login
+// useEffect(() => {
+//   if (isLoggedIn && user) {
+//     // Make a request to fetch the user's profile using the stored user data or user ID
+//     // Replace 'fetchUserProfile' with the actual function to fetch the user's profile
+//     fetchUserProfile();
+//   }
+// }, [isLoggedIn, user]);
+
+// const fetchUserProfile = () => {
+//   // Example code to fetch user's profile
+//   // Replace 'api.get' with the actual endpoint to fetch user's profile data
+//   api.get('/profile')
+//     .then((response) => {
+//       // Set user profile data in the state
+//       setUser(response.data);
+//     })
+//     .catch((error) => {
+//       // Handle error
+//       console.error('Error fetching user profile:', error);
+//     });
+// };
 
   return (
     <AuthContext.Provider value={{  isLoggedIn, isLoading, user, storeToken, authenticateUser, logOutUser }}>

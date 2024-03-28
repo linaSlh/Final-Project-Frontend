@@ -2,11 +2,12 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
-import ProjectListPage from "./pages/ProjectListPage";
-import ProjectDetailsPage from "./pages/ProjectDetailsPage";
-import EditProjectPage from "./pages/EditProjectPage";
+import PostListPage from "./pages/PostListPage";
+import PostDetailsPage from "./pages/PostDetailsPage";
+import EditPostPage from "./pages/EditPostPage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
+
 function App() {
   return (
     <div className="App">
@@ -14,11 +15,13 @@ function App() {
 
       <Routes>      
         <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/projects" element={<ProjectListPage />} />
-        <Route exact path="/projects/:projectId" element={<ProjectDetailsPage />} />
-        <Route exact path="/projects/edit/:projectId" element={<EditProjectPage />} />  
+        <Route exact path="/posts" element={<PostListPage />} />
+        <Route exact path="/posts/:postId" element={<PostDetailsPage />} />
+        <Route exact path="/posts/edit/:postId" element={<EditPostPage />} />  
         <Route exact path="/signup" element={<SignupPage/>}/> 
         <Route path="/login" element={ <LoginPage /> } />
+        
+
       </Routes>
     </div>
   );

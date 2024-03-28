@@ -17,7 +17,11 @@ function LoginPage(props) {
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
 
-  
+  //added by me to refresh the page after login
+  const refreshPage = () => {
+    window.location.reload();
+  };
+  //end
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     const requestBody = { email, password };
@@ -30,9 +34,11 @@ function LoginPage(props) {
         console.log('JWT token',response.data.authToken); 
         // storeToken() // this will store the token in localStorage  , remove the (response.data.authToken )
         localStorage.setItem('authToken', response.data.authToken);
+        
       
         // authenticateUser() // update the auth state variables accordingly
-        navigate('/');                             // <== ADD   
+        navigate('/');  
+        refreshPage();                            // <== ADD   
       })
       .catch((error) => {
         const errorDescription = error.response.data.message;

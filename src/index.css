@@ -1,111 +1,114 @@
-/* src/index.css
 
-body {
+
+html{
+  
   margin: 0;
+  padding: 0;
 }
 
-a {
-  list-style: none;
-  color: black;
+.homepage-container{
+  height: 100%;
+  margin: 0;
+  background-image: url('src/assets/journey.jpg');
+  background-size : cover;
+  background-position: center;
+  color: #fff; /* Text color on top of the background image */
 }
 
-button,
-select {
-  padding: 5px 10px;
-  min-width: 50px;
-  margin: 5px;
-  font-size: 18px;
-}
-
-label {
-  width: 200px;
-  display: block;
-}
-
-input,
-textarea {
-  width: 200px;
-  padding: 10px;
-  display: inline-block;
-  margin: 10px;
-}
-
-nav {
-  background: #515f7d;
-  color: white;
-  padding: 0px 20px;
-  box-shadow: 0px 1px 2px gray;
+.App nav {
+  padding-top: 50px;
+  position: fixed;
   width: 100%;
-  margin-bottom: 15px;
-  padding: 5px;
+  top: 0;
+  left: 0;
+  z-index: 999; /* Ensure it stays on top */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-nav li {
-  list-style: none;
+.App nav button {
+  font-size: larger;
   color: white;
-  font-size: 24px;
-  font-weight: 600;
+  text-decoration: none;
+  margin-left: 20px; /* Adjust spacing between links */
+  margin-right: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease; /* Add transition for color, padding, and border */
 }
-
-.card {
-  width: 400px;
-  padding: 10px;
-  box-shadow: 0px 2px 3px grey;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  background: #94a7c8;
-  border-radius: 4px;
+.App nav button:hover {
+  color: #a39f9f; /* Change text color on hover */
+  border: 2px solid white; /* Add border on hover */
+  padding: 8px 12px; /* Add padding around the text on hover */
+  border-radius: 10px; /* Round the borders */
 }
-
-.ProjectCard h3::after {
-  content: url("https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/icon-expand.png");
-  margin-left: 5px;
+.homepage-container{
+  height: 100%;
+  padding-top: 200px;
 }
-
-.EditProjectPage,
-.AddProject,
-.AddTask,
-.SignupPage,
-.LoginPage {
-  background: #f9eec3;
-  border: 1px solid grey;
-  box-shadow: 0px 2px 3px grey;
-  width: 400px;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 4px;
-}
-
-.EditProjectPage {
-  background-color: rgb(239, 196, 88);
-}
-
-.SignupPage,
-.LoginPage {
-  background-color: #608dd5;
+.LoginPage{
+  padding-top: 200px; 
+  font-size: large;
 }
 
 .LoginPage {
-  background-color: #94a7c8;
-}
-
-.EditProjectPage form,
-.AddTask form,
-.AddProject form,
-.SignupPage form,
-.LoginPage form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: rgb(46, 45, 45);
 }
 
-.AddTask button,
-.AddProject button {
+.login-form {
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Add padding */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  margin-bottom: 20px; /* Add space between form and "Don't have an account" text */
+  width: 300px; /* Set the width of the form */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Add space between form groups */
+}
+
+.form-group label {
   display: block;
+  margin-bottom: 5px; /* Add space between label and input */
 }
 
-.TaskCard {
-  background-color: #dfeef9;
-} */
+.form-group input {
+  width: calc(100% - 22px); /* Adjust the width of the input to prevent it from exceeding the form's width */
+  padding: 10px;
+  border: 1px solid rgb(76, 72, 72);; /* White borders */
+  border-radius: 5px; /* Rounded corners */
+  background-color: transparent; /* Transparent background */
+  color: rgb(76, 72, 72);;
+  outline: none; /* Remove default outline */
+}
+
+.form-group input::placeholder {
+  color: rgb(76, 72, 72);;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(76, 72, 72);; /* White borders */
+  border-radius: 5px; /* Rounded corners */
+  background-color: transparent; /* Transparent background */
+  color: rgb(76, 72, 72);;
+  cursor: pointer;
+  outline: none; /* Remove default outline */
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(76, 72, 72);;
+  color:white;
+}
+
+.error-message {
+  color: red;
+}

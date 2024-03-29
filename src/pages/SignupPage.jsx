@@ -48,10 +48,11 @@ function SignupPage() {
  
   
   return (
-    <div className="SignupPage">
+    <div className="SignupPage LoginPage"> 
       <h1>Sign Up</h1>
  
-      <form onSubmit={handleSignupSubmit}>
+      <form onSubmit={handleSignupSubmit}className="login-form" >
+      <div className="form-group">
         <label>Email:</label>
         <input 
           type="email"
@@ -59,7 +60,9 @@ function SignupPage() {
           value={email}
           onChange={handleEmail}
         />
- 
+      </div>
+
+      <div className="form-group">
         <label>Password:</label>
         <input 
           type="password"
@@ -67,7 +70,8 @@ function SignupPage() {
           value={password}
           onChange={handlePassword}
         />
- 
+      </div>
+      <div className="form-group">
         <label>Name:</label>
         <input 
           type="text"
@@ -75,6 +79,7 @@ function SignupPage() {
           value={name}
           onChange={handleName}
         />
+        </div>
  
         <button type="submit">Sign Up</button>
       </form>

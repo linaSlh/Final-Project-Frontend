@@ -7,6 +7,7 @@ import PostDetailsPage from "./pages/PostDetailsPage";
 import EditPostPage from "./pages/EditPostPage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
+import AddComment from "./components/AddComment";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route exact path="/posts/edit/:postId" element={<EditPostPage />} />  
         <Route exact path="/signup" element={<SignupPage/>}/> 
         <Route path="/login" element={ <LoginPage /> } />
-        
+        <Route exact path="/posts/:postId/comments" element={<AddComment />} />
 
       </Routes>
     </div>

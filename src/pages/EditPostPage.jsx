@@ -148,8 +148,10 @@ function EditPostPage(props) {
           onChange={(e) => setContent(e.target.value)}
         />
         <button type="submit">Update Post</button>
+        
       </form>
       <button onClick={deletePost}>Delete Post</button>
+      
     </div>
   );
 }

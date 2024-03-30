@@ -48,7 +48,7 @@ function SignupPage() {
  
   
   return (
-    <div className="SignupPage LoginPage"> 
+    <div className="SignupPage"> 
       <h1>Sign Up</h1>
  
       <form onSubmit={handleSignupSubmit}className="login-form" >

@@ -131,9 +131,10 @@ function EditPostPage(props) {
   };  
 
   return (
-    <div className="EditPostPage">
-      <h3>Edit the Post</h3>
-      <form onSubmit={handleFormSubmit}>
+    <div className="EditPostPage" >
+      
+      <form onSubmit={handleFormSubmit} className="login-form">
+      <div className="form-group">
         <label>Title:</label>
         <input
           type="text"
@@ -141,16 +142,20 @@ function EditPostPage(props) {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
+        </div>
+        <div className="form-group">
         <label>content:</label>
         <textarea
           name="content"
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
-        <button type="submit">Update Post</button>
+        </div>
         
+        <button type="submit">Update Post</button>
+        <button onClick={deletePost}>Delete Post</button>
       </form>
-      <button onClick={deletePost}>Delete Post</button>
+     
       
     </div>
   );

@@ -33,9 +33,10 @@ function AddPost(props) {
 
   return (
     <div className="AddPost">
-      <h3>Add Post</h3>
+      {/* <h3>Add Post</h3> */}
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="login-form">
+      <div className="form-group">
         <label>Title:</label>
         <input
           type="text"
@@ -43,7 +44,8 @@ function AddPost(props) {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        
+        </div>
+        <div className="form-group">
         <label>Region:</label>
         <input
           type="text"
@@ -51,7 +53,8 @@ function AddPost(props) {
           value={region}
           onChange={(e) => setRegion(e.target.value)}
         />
-
+        </div>
+        <div className="form-group">
         <label>Content:</label>
         <textarea
           type="text"
@@ -59,8 +62,8 @@ function AddPost(props) {
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
-
-        <button type="submit">Submit</button>
+        </div>
+        <button type="submit">Add Post</button>
       </form>
     </div>
   );

@@ -13,9 +13,9 @@ function Navbar() {
 
       {isLoggedIn && (
         <>
-          <span>Welcome {user.username} </span>
+          <span className="navtext">Hi there !</span>
           <Link to="/posts">
-            <button>create a post</button>
+            <button>Share your expreience</button>
           </Link>        
           <button onClick={logOutUser}>Logout</button>
         </>

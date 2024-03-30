@@ -6,6 +6,7 @@ import axios from "axios";
 import AddComment from "../components/AddComment";
 import CommentCard from "../components/CommentCard";
 import commentsService from "../services/comments.service";
+import { useParams } from "react-router-dom";
 const API_URL = "http://localhost:5005";
 
 function CommentListPage() {

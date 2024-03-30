@@ -10,6 +10,7 @@ import LoginPage from "./pages/LoginPage";
 import AddComment from "./components/AddComment";
 
 function App() {
+  
   return (
     <div className="App">
       <Navbar />

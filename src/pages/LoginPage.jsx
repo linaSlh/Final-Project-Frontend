@@ -86,7 +86,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:5005";
+const API_URL = "https://final-project-backend-2gir.onrender.com/";
 
 
 function LoginPage(props) {

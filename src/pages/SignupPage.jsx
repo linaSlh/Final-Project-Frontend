@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 // import { AuthContext } from "../context/auth.context";
 // import authService from "../services/auth.service";
- const API_URL = "http://localhost:5005";
+ const API_URL = "https://final-project-backend-2gir.onrender.com/";
  
 function SignupPage() {
   const [email, setEmail] = useState("");

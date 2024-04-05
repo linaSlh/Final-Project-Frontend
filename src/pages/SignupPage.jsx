@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 // import { AuthContext } from "../context/auth.context";
 // import authService from "../services/auth.service";
- const API_URL = "https://final-project-backend-2gir.onrender.com/";
+ const API_URL = "https://final-project-backend-2gir.onrender.com";
  
 function SignupPage() {
   const [email, setEmail] = useState("");
@@ -19,34 +19,83 @@ function SignupPage() {
   const handlePassword = (e) => setPassword(e.target.value);
   const handleName = (e) => setName(e.target.value);
  
-  
-  const handleSignupSubmit = (e) => {
-    e.preventDefault();
-    // Create an object representing the request body
-    const requestBody = { email, password, username:name };
- 
+  //new comment 
+  // const handleSignupSubmit = (e) => {
+  //   e.preventDefault(); 
+  //end
+
+    //new comment
+    // const requestBody = { email, password, username:name };
+ //end
+
     // Make an axios request to the API
     // If the POST request is a successful redirect to the login page
     // If the request resolves with an error, set the error message in the state
-    axios.post(`${API_URL}/auth/signup`, requestBody)
+
+    //newcomment 
+
+    // axios.post(`${API_URL}/auth/signup`, requestBody)
+//end
+
     // authService.signup(requestBody)  
-    .then(() => {
-        navigate('/login');
+
+    //newcomment
+    // .then(() => {
+    //     navigate('/login');
+//end
+
         // 1. store the token to the localStorage
         // storeToken(response.data.authToken)
         // 2. verify the token 
         // authenticateUser()
-      })
+
+        //new comment
+      // })
+      //end
+
     //   .then(()=>{
     //     navigate('/');
     //   })
-      .catch((error) => {
-        const errorDescription = error.response;
-        setErrorMessage(errorDescription);
-      })
-  };
- 
+
+    //new comment
+  //     .catch((error) => {
+  //       const errorDescription = error.response;
+  //       setErrorMessage(errorDescription);
+  //     })
+  // };
+ //end
   
+
+ const handleSignupSubmit = async (e) => {
+  e.preventDefault();
+  // Create an object representing the request body
+  const requestBody = { email, password, username: name };
+
+  try {
+    // Make an axios request to the API
+    await axios.post(`${API_URL}/auth/signup`, requestBody);
+    // If the POST request is successful, redirect to the login page
+    navigate('/login');
+  } catch (error) {
+    // If the request resolves with an error, set the error message in the state
+    if (error.response) {
+      // The request was made and the server responded with a status code
+      // that falls out of the range of 2xx
+      setErrorMessage(error.response.data.message);
+    } else if (error.request) {
+      // The request was made but no response was received
+      setErrorMessage("Network error. Please try again later.");
+    } else {
+      // Something else happened while setting up the request
+      setErrorMessage("An unexpected error occurred. Please try again later.");
+    }
+  }
+};
+
+
+
+
+
   return (
     <div className="SignupPage"> 
       <h1>Sign Up</h1>

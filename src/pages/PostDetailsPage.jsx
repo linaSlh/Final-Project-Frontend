@@ -7,7 +7,7 @@ import axios from "axios";
 // import AddTask from "../components/AddTask";
 // import TaskCard from "../components/TaskCard";
 
-const API_URL = "https://final-project-backend-2gir.onrender.com/";
+const API_URL = "https://final-project-backend-2gir.onrender.com";
 
 function PostDetailsPage (props) {
   const [post, setPost] = useState(null);

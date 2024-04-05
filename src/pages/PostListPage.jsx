@@ -41,7 +41,7 @@ import axios from "axios";
 import PostCard from "../components/PostCard";
 import AddPost from "../components/AddPost";
 import postsService from "../services/posts.service";
-const API_URL = "https://final-project-backend-2gir.onrender.com/";
+const API_URL = "https://final-project-backend-2gir.onrender.com";
 
 function PostListPage() {
   const [posts, setPosts] = useState([]);

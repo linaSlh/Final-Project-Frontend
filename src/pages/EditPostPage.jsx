@@ -81,7 +81,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from "axios";
 
-const API_URL = "https://final-project-backend-2gir.onrender.com/";
+const API_URL = "https://final-project-backend-2gir.onrender.com";
 
 function EditPostPage(props) {
   const [title, setTitle] = useState("");

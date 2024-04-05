@@ -33,10 +33,8 @@ class AuthService {
     // same as
     // return axios.post("http://localhost:5005/auth/singup");
   };
-//added by me
-  // profile = () => {
-  //   return this.api.get('/profile');
-  // };
+
+
   verify = () => {
     return this.api.get('/auth/verify');
     // same as

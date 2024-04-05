@@ -3,7 +3,7 @@ import axios from "axios";
 import authService from "../services/auth.service";
 
 const api = axios.create({
-  baseURL: import.meta.env.REACT_APP_API_URI,
+  baseURL:'https://travelapp-experience.netlify.app',
 });
 
 const AuthContext = React.createContext();

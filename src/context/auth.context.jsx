@@ -3,7 +3,7 @@ import axios from "axios";
 import authService from "../services/auth.service";
 
 const api = axios.create({
-  baseURL:'https://travelapp-experience.netlify.app',
+  baseURL: import.meta.env.VITE_REACT_APP_API_URI,
 });
 
 const AuthContext = React.createContext();
@@ -19,7 +19,7 @@ function AuthProviderWrapper(props) {
 
   const authenticateUser = () => {
     const storedToken = localStorage.getItem('authToken');
-    console.log(storedToken);
+
     if (storedToken) {
       authService.verify()
         .then((response) => {
@@ -27,7 +27,6 @@ function AuthProviderWrapper(props) {
           setIsLoggedIn(true);
           setIsLoading(false);
           setUser(user);
-         
         })
         .catch((error) => {
           setIsLoggedIn(false);

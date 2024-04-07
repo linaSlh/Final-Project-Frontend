@@ -6,7 +6,7 @@ function HomePage() {
       <h2>Where Adventures Meet Memories</h2>
       <div className="card">
        <p>
-        <code>{(import.meta.env.VITE_REACT_APP_API_URL)}</code>
+        <code>{(import.meta.env.VITE_SERVER_URL)}</code>
        </p>
       </div>
     </div>

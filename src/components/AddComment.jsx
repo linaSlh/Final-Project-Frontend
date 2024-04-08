@@ -14,6 +14,7 @@ function AddComment(props) {
         // Reset the state after successful comment creation
         setYourcomment("");
         console.log( requestBody);
+        
         // props.refreshcomments();
         
       })

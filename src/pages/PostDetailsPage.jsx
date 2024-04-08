@@ -35,6 +35,14 @@ function PostDetailsPage (props) {
     getPost();
   }, [] );
 
+//added to add comment to the details page successfully
+
+const refreshPost = () => {
+  getPost();
+};
+
+
+
   return (
     <div className="PostDetails">
       {post && (
@@ -65,5 +73,6 @@ function PostDetailsPage (props) {
     </div>
   );
 }
+
 
 export default PostDetailsPage;

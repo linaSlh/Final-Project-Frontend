@@ -4,10 +4,10 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from 'react-router-dom';
 import axios from "axios";
-// import AddTask from "../components/AddTask";
-// import TaskCard from "../components/TaskCard";
+import AddComment from "../components/AddComment";
+import CommentCard from "../components/CommentCard";
 
-//const API_URL = "http://localhost:5005";
+
 const API_URL = import.meta.env.VITE_SERVER_URL;
 
 function PostDetailsPage (props) {
@@ -51,9 +51,9 @@ function PostDetailsPage (props) {
       <button>Add comment</button>
       </Link>
 
-      {/* <AddTask refreshPost={getPost} postId={postId} />          
+       <AddComment refreshPost={getPost} postId={postId} />          
 
-      { post && post.tasks.map((task) => <TaskCard key={task._id} {...task} /> )}  */}
+      { post && post.comments.map((comment) => <CommentCard key={comment._id} {...comment} /> )}  
 
       <Link to="/posts">
         <button>Back to posts</button>

@@ -46,7 +46,7 @@ function AddPost(props) {
         />
         </div>
         <div className="form-group">
-        <label>Region:</label>
+        <label>Region:<span>africa,europe,asia....</span></label>
         <input
           type="text"
           name="region"

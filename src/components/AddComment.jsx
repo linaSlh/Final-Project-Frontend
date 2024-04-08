@@ -7,7 +7,7 @@ function AddComment(props) {
   const {postId} = useParams()
  console.log(props);
   const handleAddComment = () => {
-    // const requestBody = {yourcomment};
+  const requestBody = {yourcomment};
 
     commentsService.createComment(postId, requestBody)
       .then(() => {

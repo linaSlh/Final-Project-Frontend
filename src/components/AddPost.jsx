@@ -15,6 +15,7 @@ function AddPost(props) {
   useEffect(() => {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     setUser(currentUser); // Set the current user
+    console.log(currentUser);
   }, []);
 
 

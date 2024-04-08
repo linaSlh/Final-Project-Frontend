@@ -43,18 +43,17 @@ function PostDetailsPage (props) {
           <p>{post.content}</p>
         </>
       )}
+       <AddComment refreshPost={getPost} postId={postId} />          
 
+      { post && post.comments.map((comment) => <CommentCard key={comment._id} {...comment} /> )}  
+     
+     
       <div>
         <h1>More details about the trip</h1>
       </div>
       <Link to={`/posts/${postId}/comments`}>
       <button>Add comment</button>
       </Link>
-
-       <AddComment refreshPost={getPost} postId={postId} />          
-
-      { post && post.comments.map((comment) => <CommentCard key={comment._id} {...comment} /> )}  
-
       <Link to="/posts">
         <button>Back to posts</button>
       </Link>

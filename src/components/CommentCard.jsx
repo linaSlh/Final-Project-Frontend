@@ -1,13 +1,12 @@
 
 // We are deconstructing props object directly in the parentheses of the function
-function CommentCard ( { yourcomment} ) {
+function CommentCard(props) {const{yourcomment, author} = props;
   
   return (
     <div className="CommentCard card">
-      
-        <h3>{yourcomment}</h3>
      
       <p style={{ maxWidth: "400px" }}>{yourcomment} </p>
+      <p>By: {author}</p>
     </div>
   );
 }

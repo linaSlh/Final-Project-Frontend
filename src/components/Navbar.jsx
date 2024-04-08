@@ -15,7 +15,7 @@ function Navbar() {
         <>
           <span className="navtext">Hi there !
        <p>
-        <code>{user.username}</code>
+        <code>{user.name}</code>
        </p>
       </span>
           <Link to="/posts">

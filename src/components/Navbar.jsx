@@ -13,11 +13,11 @@ function Navbar() {
 
       {isLoggedIn && (
         <>
-          <span className="navtext">Hi there !<span>
+          <span className="navtext">Hi there !
        <p>
         <code>{user.username}</code>
        </p>
-      </span></span>
+      </span>
           <Link to="/posts">
             <button>Share your expreience</button>
           </Link>        

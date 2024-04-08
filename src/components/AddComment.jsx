@@ -13,6 +13,7 @@ function AddComment(props) {
       .then(() => {
         // Reset the state after successful comment creation
         setYourcomment("");
+        console.log( requestBody);
         // props.refreshcomments();
         
       })

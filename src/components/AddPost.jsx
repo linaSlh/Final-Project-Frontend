@@ -1,7 +1,7 @@
 
 
 // export default AddPost;
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import axios from "axios";
 import postsService from "../services/posts.service";
 
@@ -9,6 +9,14 @@ function AddPost(props) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [region, setRegion]  = useState("");
+  const [user, setUser] = useState(null); // Define user state
+
+  // Assuming getCurrentUser is a function to fetch the current user
+  useEffect(() => {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    setUser(currentUser); // Set the current user
+  }, []);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -65,6 +73,9 @@ function AddPost(props) {
         </div>
         <button type="submit">Add Post</button>
       </form>
+      {user && (
+        <p>Posted by: {user.name}</p>
+      )}
     </div>
   );
 }

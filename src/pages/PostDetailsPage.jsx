@@ -45,7 +45,7 @@ function PostDetailsPage (props) {
       )}
        <AddComment refreshPost={getPost} postId={postId} />          
 
-      { post && post.comments.map((comment) => <CommentCard key={comment._id} {...comment} /> )}  
+      { post && post.comments && post.comments.map((comment) => <CommentCard key={comment._id} {...comment} /> )}  
      
      
       <div>

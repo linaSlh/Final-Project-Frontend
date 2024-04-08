@@ -9,7 +9,7 @@ function PostCard ( { title, content, _id , author } ) {
         <h3>{title}</h3>
       </Link>
       <p style={{ maxWidth: "400px" }}>{content} </p>
-      <p>by : {author}</p>
+      <p>by : {author.username}</p>
     </div>
   );
 }

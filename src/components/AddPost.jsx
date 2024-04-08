@@ -9,7 +9,7 @@ function AddPost(props) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [region, setRegion]  = useState("");
-  const [user, setUser] = useState(null); // Define user state
+  const [user, setUser] = useState(""); // Define user state
 
   // Assuming getCurrentUser is a function to fetch the current user
   useEffect(() => {

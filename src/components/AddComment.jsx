@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 function AddComment(props) {
   const [yourcomment, setYourcomment] = useState("");
   const {postId} = useParams()
- console.log(props);
+ 
   const handleAddComment = () => {
   const requestBody = {yourcomment};
 
@@ -13,7 +13,7 @@ function AddComment(props) {
       .then(() => {
         // Reset the state after successful comment creation
         setYourcomment("");
-        props.refreshComments();
+        // props.refreshcomments();
         
       })
       .catch((error) => console.log(error));

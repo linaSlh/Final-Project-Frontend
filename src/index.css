@@ -14,10 +14,11 @@ html{
 
 
 .homepage-container{
+  padding-top: 100px;
   padding-bottom: 70px;
   height: 100%;
   margin: 0;
-  font-size: 50px;
+  font-size: 20px;
   
   background-position: center;
   
@@ -63,10 +64,7 @@ html{
   padding: 8px 12px; /* Add padding around the text on hover */
   border-radius: 10px; /* Round the borders */
 }
-.homepage-container{
-  height: 100%;
-  padding-top: 200px;
-}
+
 .LoginPage{
   
   
@@ -223,33 +221,51 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
 .gallery {
   display: flex;
   overflow: hidden;
+  width: 80%; /* Adjust the width of the slideshow */
+  height: 600px; /* Adjust height as needed */
+  position: relative;
+  margin: 0 auto; /* Center the slideshow */
 }
 
 .gallery-item {
-  flex: 0 0 auto;
-  width: 100%;
-  transition: transform 1s ease;
-}
-
-.gallery-item img {
-  width: 100%;
+    padding-top: 50px;
+    flex: 0 0 auto;
+    width: 100%;
+    transition: transform 1s ease-in-out; /* Adjust duration and timing function as needed */
+ 
 }
 
 @keyframes slide {
-  0% {
-    transform: translateX(0%);
+
+  /* } */
+  0% { transform: translateX(0); }
+  25% { transform: translateX(0); } /* Start transition */
+  30% { transform: translateX(-100%); } /* End of first image */
+  50% { transform: translateX(-100%); }
+  55% { transform: translateX(-200%); } /* End of second image */
+  75% { transform: translateX(-200%); }
+  80% { transform: translateX(-300%); } /* End of third image */
+  100% { transform: translateX(-300%); }
   }
-  100% {
-    transform: translateX(-100%);
+  
+  /* Apply animation to slides */
+  .gallery-item {
+    animation: slide 15s linear infinite; /* Adjust duration as needed */
   }
-}
+  
+  
+  /* Ensure images fill the container */
+  .gallery-item img {
+      width:  auto;
+      height: 100%; /* Adjust this as needed to maintain aspect ratio */
+      object-fit: contain; /* Ensures the image covers the entire container */
+    }
+  
 
-.gallery-item:nth-child(1) {
-  animation: slide 6s infinite;
-}
 
-.gallery-item:nth-child(2) {
-  animation: slide 6s infinite 2s; /* Delayed start for second image */
-}
 
-/* Adjust delay for more gallery items */
+
+
+
+
+

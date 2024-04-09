@@ -24,7 +24,7 @@ function AddComment(props) {
   return (
     <div className="AddComment">
       <h3>Add your Comment</h3>
-      <div className="form-group">
+      <div className="comment-form">
       <label> Your Comment </label>
       <textarea
         type="text"

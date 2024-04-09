@@ -220,26 +220,3 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
   padding-top: 200px;
   font-size: larger;
 }
-.AddComment {
-  /* Add padding to the left */
-  padding-left: 20px;
-}
-
-.comment-form {
-  /* Adjust width of textarea */
-  width: 100%;
-}
-
-label {
-  /* Align label to the left */
-  display: block;
-}
-
-textarea {
-  /* Make textarea wider */
-  width: 100%;
-  /* Add rounded corners */
-  border-radius: 5px;
-  /* Add padding if necessary */
-  padding: 10px;
-}

@@ -1,15 +1,8 @@
-// function HomePage() {
-//   return (
-//     <div className="homepage-container">
-   
-//       <span><h1>Discover, Wander,</h1></span><span className="highlight"><h1>Connect.</h1></span>
-//       <h2>Where Adventures Meet Memories</h2>
-
-//     </div>
-//   );
-// }
-
-// export default HomePage;
+import greeceimg from "../assets/greece.jpg"
+import machupiccuimg from "../assets/machu-picchu.jpg"
+import japanimg from "../assets/kimono.jpg"
+import marrakechimg from "../assets/marrakech.jpgjpg"
+import mountainimg from "../assets/mountains.jpg"
 function HomePage() {
   return (
     <div className="homepage-container">
@@ -18,23 +11,23 @@ function HomePage() {
       
       <div className="gallery">
         <div className="gallery-item">
-          <img src="/assets/greece.jpg" alt="greece" />
+        <img src={greeceimg} alt="greece" />
           <p>Small text under Image 1</p>
         </div>
         <div className="gallery-item">
-          <img src="/assets/machu-picchu.jpg" alt="machu picchu" />
+        <img src={machupiccuimg} alt="machupicchu" />
           <p>Small text under Image 2</p>
         </div>
         <div className="gallery-item">
-          <img src="/assets/kimono.jpg" alt="Japan" />
+        <img src={japanimg} alt="japan" />
           <p>Small text under Image 2</p>
         </div>
         <div className="gallery-item">
-          <img src="/assets/marrakech.jpg" alt="marrakech" />
+        <img src={marrakechimg} alt="marrakech" />
           <p>Small text under Image 2</p>
         </div>
         <div className="gallery-item">
-          <img src="/assets/mountains.jpg" alt="mountains" />
+        <img src={mountainimg} alt="mountains" />
           <p>Small text under Image 2</p>
         </div>
         

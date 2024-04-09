@@ -269,8 +269,13 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
       padding: 10px;
     }
     
+    
     .logo {
-      flex: 1; /* Logo occupies remaining space */
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 70px; 
+        left: 20px;
     }
     
     .nav-links {

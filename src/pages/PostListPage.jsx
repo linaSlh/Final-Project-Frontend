@@ -12,41 +12,60 @@ function PostListPage() {
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState(null);
 
-  const getAllPosts = () => {
-    // Get the token from the localStorage
-    const storedToken = localStorage.getItem("authToken");
+//   const getAllPosts = () => {
+//     // Get the token from the localStorage
+//     const storedToken = localStorage.getItem("authToken");
    
-    // Send the token through the request "Authorization" Headers
-    axios
-      .get(
-      `${API_URL}/api/posts`,
-      { headers: { Authorization: `Bearer ${storedToken}` } }
-    )
-    //added toget Author username insteadof id //
+//     // Send the token through the request "Authorization" Headers
+//     axios
+//       .get(
+//       `${API_URL}/api/posts`,
+//       { headers: { Authorization: `Bearer ${storedToken}` } }
+//     )
+//     //added toget Author username insteadof id //
 
-    .then((response) => {
-      // For each post, fetch the author's username
-      const promises = response.data.map(post => {
-        return axios
-          .get(`${API_URL}/api/users/${post.author}`)
-          .then(userResponse => ({ ...post, author: userResponse.data.username }))
-          .catch(error => {
-            console.error(`Error fetching username for post ${post._id}:`, error);
-            return post; // Fallback to the original post if fetching username fails
-          });
-      });
+//     .then((response) => {
+//       // For each post, fetch the author's username
+//       const promises = response.data.map(post => {
+//         return axios
+//           .get(`${API_URL}/api/users/${post.author}`)
+//           .then(userResponse => ({ ...post, author: userResponse.data.username }))
+//           .catch(error => {
+//             console.error(`Error fetching username for post ${post._id}:`, error);
+//             return post; // Fallback to the original post if fetching username fails
+//           });
+//       });
 
-      // Wait for all promises to resolve
-      Promise.all(promises)
-        .then(postsWithUsername => setPosts(postsWithUsername))
-        .catch(error => setError("Error fetching usernames:", error));
-    })
-    .catch((error) => setError("Error fetching posts"));
-};
+//       // Wait for all promises to resolve
+//       Promise.all(promises)
+//         .then(postsWithUsername => setPosts(postsWithUsername))
+//         .catch(error => setError("Error fetching usernames:", error));
+//     })
+//     .catch((error) => setError("Error fetching posts"));
+// };
 
 
 
     //end//
+
+    const getAllPosts = () => {
+      postsService.getAllPosts()
+        .then(response => {
+          const promises = response.data.map(post => {
+            return postsService.getUser(post.author)
+              .then(userResponse => ({ ...post, author: userResponse.data.username }))
+              .catch(error => {
+                console.error(`Error fetching username for post ${post._id}:`, error);
+                return post; // Fallback to the original post if fetching username fails
+              });
+          });
+  
+          Promise.all(promises)
+            .then(postsWithUsername => setPosts(postsWithUsername))
+            .catch(error => setError("Error fetching usernames:", error));
+        })
+        .catch(error => setError("Error fetching posts"));
+    };
 
 
 

@@ -18,23 +18,23 @@ function HomePage() {
       
       <div className="gallery">
         <div className="gallery-item">
-          <img src="/src/assets/greece.jpg" alt="greece" />
+          <img src="/assets/greece.jpg" alt="greece" />
           <p>Small text under Image 1</p>
         </div>
         <div className="gallery-item">
-          <img src="/src/assets/machu-picchu.jpg" alt="machu picchu" />
+          <img src="/assets/machu-picchu.jpg" alt="machu picchu" />
           <p>Small text under Image 2</p>
         </div>
         <div className="gallery-item">
-          <img src="/src/assets/kimono.jpg" alt="Japan" />
+          <img src="/assets/kimono.jpg" alt="Japan" />
           <p>Small text under Image 2</p>
         </div>
         <div className="gallery-item">
-          <img src="/src/assets/marrakech.jpg" alt="marrakech" />
+          <img src="/assets/marrakech.jpg" alt="marrakech" />
           <p>Small text under Image 2</p>
         </div>
         <div className="gallery-item">
-          <img src="/src/assets/mountains.jpg" alt="mountains" />
+          <img src="/assets/mountains.jpg" alt="mountains" />
           <p>Small text under Image 2</p>
         </div>
         

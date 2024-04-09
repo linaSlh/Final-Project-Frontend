@@ -25,15 +25,12 @@ html{
   color: black /* Text color on top of the background image */
 }
 
-.navtext{
-  color: #f1d70e;
-  font-size: 40px;
-}
+
 .highlight {
   text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
   color: #f1d70e;
 }
-.App nav {
+/* .App nav {
   
   padding-bottom: 40px;
   
@@ -42,28 +39,30 @@ html{
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 999; /* Ensure it stays on top */
+  z-index: 999; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.App nav button {
+} */
+
+/* .App nav button {
   font-size: larger;
   color: black;
   text-decoration: none;
-  margin-left: 20px; /* Adjust spacing between links */
+  margin-left: 20px; 
   margin-right: 20px;
   border: none;
   background: none;
   cursor: pointer;
-  transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease; /* Add transition for color, padding, and border */
-}
-.App nav button:hover {
-  color: #f1d70e; /* Change text color on hover */
-  border: 2px solid #f1d70e; /* Add border on hover */
-  padding: 8px 12px; /* Add padding around the text on hover */
-  border-radius: 10px; /* Round the borders */
-}
+  transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease; 
+} */
+
+/* .App nav button:hover {
+  color: #f1d70e; 
+  border: 2px solid #f1d70e;
+  padding: 8px 12px; 
+  border-radius: 10px; 
+} */
 
 .LoginPage{
   
@@ -263,9 +262,28 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
   
 
 
-
-
-
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    
+    .logo {
+      flex: 1; /* Logo occupies remaining space */
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 10px; /* Spacing between links */
+    }
+    
+    .nav-links > * {
+      margin-left: 10px; /* Add margin between buttons */
+    }
+    
+    /* Additional styling as needed */
+    
 
 
 

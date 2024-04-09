@@ -21,13 +21,45 @@ function PostListPage() {
       `${API_URL}/api/posts`,
       { headers: { Authorization: `Bearer ${storedToken}` } }
     )
-    postsService.getAllPosts()
-      .then((response) => setPosts(response.data))
-      .catch((error) => console.log(error));
-  };
+    //added toget Author username insteadof id //
+
+    .then((response) => {
+      // For each post, fetch the author's username
+      const promises = response.data.map(post => {
+        return axios.get(`${API_URL}/api/users/${post.author}`)
+          .then(userResponse => ({ ...post, author: userResponse.data.username }))
+          .catch(error => {
+            console.error(`Error fetching username for post ${post._id}:`, error);
+            return post; // Fallback to the original post if fetching username fails
+          });
+      });
+
+      // Wait for all promises to resolve
+      Promise.all(promises)
+        .then(postsWithUsername => setPosts(postsWithUsername))
+        .catch(error => console.error("Error fetching usernames:", error));
+    })
+    .catch((error) => console.log(error));
+};
+
+
+
+    //end//
+
+
+
+
+  //commented out for same reason
+  //   postsService.getAllPosts()
+  //     .then((response) => setPosts(response.data))
+  //     .catch((error) => console.log(error));
+  // };
+//end
 
   // We set this effect will run only once, after the initial render
   // by setting the empty dependency array - []
+  
+
   useEffect(() => {
     getAllPosts();
   }, []);

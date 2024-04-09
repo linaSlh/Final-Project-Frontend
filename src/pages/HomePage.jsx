@@ -1,7 +1,7 @@
 import greeceimg from "../assets/greece.jpg"
 import machupiccuimg from "../assets/machu-picchu.jpg"
 import japanimg from "../assets/kimono.jpg"
-import marrakechimg from "../assets/marrakech.jpgjpg"
+import marrakechimg from "../assets/marrakech.jpg"
 import mountainimg from "../assets/mountains.jpg"
 function HomePage() {
   return (

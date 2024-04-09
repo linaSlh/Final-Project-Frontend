@@ -10,6 +10,7 @@ const API_URL = import.meta.env.VITE_SERVER_URL;
 
 function PostListPage() {
   const [posts, setPosts] = useState([]);
+  const [error, setError] = useState(null);
 
   const getAllPosts = () => {
     // Get the token from the localStorage
@@ -26,7 +27,8 @@ function PostListPage() {
     .then((response) => {
       // For each post, fetch the author's username
       const promises = response.data.map(post => {
-        return axios.get(`${API_URL}/api/users/${post.author}`)
+        return axios
+          .get(`${API_URL}/api/users/${post.author}`)
           .then(userResponse => ({ ...post, author: userResponse.data.username }))
           .catch(error => {
             console.error(`Error fetching username for post ${post._id}:`, error);
@@ -37,9 +39,9 @@ function PostListPage() {
       // Wait for all promises to resolve
       Promise.all(promises)
         .then(postsWithUsername => setPosts(postsWithUsername))
-        .catch(error => console.error("Error fetching usernames:", error));
+        .catch(error => setError("Error fetching usernames:", error));
     })
-    .catch((error) => console.log(error));
+    .catch((error) => setError("Error fetching posts"));
 };
 
 
@@ -67,6 +69,8 @@ function PostListPage() {
   return (
     <div className="PostListPage">
       <AddPost refreshPosts={getAllPosts} />
+
+      {error && <p>{error}</p>}
 
       {posts.map((post) => (
         <PostCard key={post._id} {...post} />

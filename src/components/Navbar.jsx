@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className="navbar">
     <div className="logo">
-    <img src={logoImage} alt="Logo" /></div>
+    <img src={logoImage} alt="Logo"/></div>
 
     <div className="nav-links">
       <Link to="/">
@@ -18,11 +18,9 @@ function Navbar() {
 
       {isLoggedIn && (
         <>
-          <span className="navtext"><p>
-           hi there !
-        <code>{user}</code>
-       </p>
-      </span>
+          <span className="navtext">
+          <p> hi there !</p>
+          </span>
           <Link to="/posts">
             <button>Share your expreience</button>
           </Link>        

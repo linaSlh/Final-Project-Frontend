@@ -273,32 +273,32 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
       justify-content: space-between;
       align-items: center;
       padding: 10px;
-      background-color: #333;
-      color: #fff;
+      background-color: #b9b6b6;
+      color: rgb(27, 26, 26);
     }
     
     .logo img {
       width: 100px; /* Adjust logo width as needed */
     }
     
-    .nav-links {
+    .nav links {
       display: flex;
       gap: 10px;
     }
     
-    .nav-button {
+    .nav button {
       border: none;
       border-radius: 20px; /* Rounded edges */
       padding: 8px 16px; /* Adjust padding as needed */
-      background-color: #555; /* Dark background */
-      color: #fff;
+      background-color: #1b1818; /* Dark background */
+      color: #5a5858;
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s; /* Smooth transition */
     }
     
-    .nav-button:hover {
-      background-color: #777; /* Darker background on hover */
-      color: #fff; /* Lighter text color on hover */
+    .nav button:hover {
+      background-color: #5a5858; /* Darker background on hover */
+      color: #1b1818; /* Lighter text color on hover */
     }
     
     /* Additional styling as needed */

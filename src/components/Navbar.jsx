@@ -18,8 +18,8 @@ function Navbar() {
 
       {isLoggedIn && (
         <>
-          <span className="navtext">Hi there !
-       <p>
+          <span className="navtext"><p>
+           hi there !
         <code>{user}</code>
        </p>
       </span>

@@ -76,7 +76,7 @@ function EditPostPage(props) {
         </div>
         
         <button type="submit">Update Post</button>
-        <button onClick={deletePost}>Delete Post</button>
+        <button type="button" onClick={deletePost}>Delete Post</button>
       </form>
      
       

@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 // We are deconstructing props object directly in the parentheses of the function
-function PostCard ( { title, content, _id , author } ) {
+function PostCard ( { title, content, _id , author} ) {
   
   return (
     <div className="PostCard">
@@ -10,7 +10,8 @@ function PostCard ( { title, content, _id , author } ) {
         <h3>{title}</h3>
       </Link>
       <p style={{ maxWidth: "400px" }}>{content} </p>
-      <p>by : {author}</p>
+      <p>by : {author.username}</p>
+      
     </div>
   );
 }

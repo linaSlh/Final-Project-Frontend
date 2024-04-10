@@ -5,7 +5,7 @@ function CommentCard(props) {const{yourcomment, author} = props;
   return (
     <div className="CommentCard card">
      
-      <p style={{ maxWidth: "400px" }}>{yourcomment} </p>
+      <p style={{ maxWidth: "400px" }}>{yourcomment}</p>
       <p>By: {author}</p>
     </div>
   );

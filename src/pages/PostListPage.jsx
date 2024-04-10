@@ -4,7 +4,7 @@ import axios from "axios";
 
 import PostCard from "../components/PostCard";
 import AddPost from "../components/AddPost";
-import postsService from "../services/posts.service";
+
 
 const API_URL = import.meta.env.VITE_SERVER_URL;
 
@@ -25,24 +25,26 @@ function PostListPage() {
     //added toget Author username insteadof id //
 
     .then((response) => {
+      console.log(response);
+      setPosts(response.data);
       // For each post, fetch the author's username
-      const promises = response.data.map(post => {
-        return axios
-          .get(`${API_URL}/api/users/${post.author}`)
-          .then(userResponse => ({ ...post, author: userResponse.data.username }))
-          .catch(error => {
-            console.error(`Error fetching username for post ${post._id}:`, error);
-            return post; // Fallback to the original post if fetching username fails
-          });
-      });
+      // const promises = response.data.map(post => {
+      //   return axios
+      //     .get(`${API_URL}/api/users/${post.author}`)
+      //     .then(userResponse => ({ ...post, author: userResponse.data.username }))
+      //     .catch(error => {
+      //       console.error(`Error fetching username for post ${post._id}:`, error);
+      //       return post; // Fallback to the original post if fetching username fails
+      //     });
+  });}
 
       // Wait for all promises to resolve
-      Promise.all(promises)
-        .then(postsWithUsername => setPosts(postsWithUsername))
-        .catch(error => setError("Error fetching usernames:", error));
-    })
-    .catch((error) => setError("Error fetching posts"));
-};
+    //   Promise.all(promises)
+    //     .then(postsWithUsername => setPosts(postsWithUsername))
+    //     .catch(error => setError("Error fetching usernames:", error));
+    // })
+//     .catch((error) => setError("Error fetching posts"));
+// };
 
 
 

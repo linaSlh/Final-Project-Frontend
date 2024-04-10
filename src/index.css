@@ -220,18 +220,23 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
 .gallery {
   display: flex;
   overflow: hidden;
-  width: 80%; /* Adjust the width of the slideshow */
-  height: 600px; /* Adjust height as needed */
+  width: 80%; 
+  height: 600px; 
   position: relative;
-  margin: 0 auto; /* Center the slideshow */
+  margin: 0 auto; 
 }
 
 .gallery-item {
-    padding-top: 50px;
-    flex: 0 0 auto;
-    width: 100%;
-    transition: transform 1s ease-in-out; /* Adjust duration and timing function as needed */
- 
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  transition: transform 1s ease-in-out; 
+}
+
+.gallery-item img {
+  width: 100%; 
+  height: 100%; 
 }
 
 @keyframes slide {
@@ -249,15 +254,15 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
   
   /* Apply animation to slides */
   .gallery-item {
-    animation: slide 15s linear infinite; /* Adjust duration as needed */
+    animation: slide 15s linear infinite; 
   }
   
   
   /* Ensure images fill the container */
   .gallery-item img {
       width:  auto;
-      height: 100%; /* Adjust this as needed to maintain aspect ratio */
-      object-fit: contain; /* Ensures the image covers the entire container */
+      height: 100%; 
+      object-fit: contain; 
     }
   
     .logo img {
@@ -273,12 +278,14 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
       justify-content: space-between;
       align-items: center;
       padding: 10px;
-      background-color: #b9b6b6;
+      height: 100px;
       
     }
     
     .logo img {
-      width: 100px; /* Adjust logo width as needed */
+      width: 100px; 
+      max-height: 90px; /* Limit logo height to 80px */
+      
     }
     
     .nav-links {
@@ -294,13 +301,13 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
       border-radius: 20px; 
       padding: 8px 16px; 
       background-color: #1b1818; 
-      color: #5a5858;
+      color: #c5c3c3;
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s; /* Smooth transition */
     }
     
     .nav-links button:hover {
-      background-color: #5a5858; /* Darker background on hover */
+      background-color: #c5c3c3; /* Darker background on hover */
       color: #1b1818; /* Lighter text color on hover */
     }
     

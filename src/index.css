@@ -14,7 +14,7 @@ html{
 
 
 .homepage-container{
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 70px;
   height: 100%;
   margin: 0;
@@ -260,16 +260,6 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
       object-fit: contain; /* Ensures the image covers the entire container */
     }
   
-
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-    }
-    
-    
     .logo img {
         
         width: 100px;
@@ -278,16 +268,43 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
         left: 20px;
     }
     
-    .nav-links {
+    .navbar {
       display: flex;
-      gap: 10px; /* Spacing between links */
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
     }
     
-    .nav-links > * {
-      margin-left: 10px; /* Add margin between buttons */
+    .logo img {
+      width: 100px; /* Adjust logo width as needed */
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .nav-button {
+      border: none;
+      border-radius: 20px; /* Rounded edges */
+      padding: 8px 16px; /* Adjust padding as needed */
+      background-color: #555; /* Dark background */
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    }
+    
+    .nav-button:hover {
+      background-color: #777; /* Darker background on hover */
+      color: #fff; /* Lighter text color on hover */
     }
     
     /* Additional styling as needed */
+    
+    
+
     
 
 

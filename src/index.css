@@ -274,34 +274,34 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
       align-items: center;
       padding: 10px;
       background-color: #b9b6b6;
-      color: rgb(27, 26, 26);
+      
     }
     
     .logo img {
       width: 100px; /* Adjust logo width as needed */
     }
     
-    .nav links {
+    .nav-links {
       display: flex;
       gap: 10px;
     }
     
-    .nav button {
+    .nav-links button {
       border: none;
-      border-radius: 20px; /* Rounded edges */
-      padding: 8px 16px; /* Adjust padding as needed */
-      background-color: #1b1818; /* Dark background */
+      border-radius: 20px; 
+      padding: 8px 16px; 
+      background-color: #1b1818; 
       color: #5a5858;
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s; /* Smooth transition */
     }
     
-    .nav button:hover {
+    .nav-links button:hover {
       background-color: #5a5858; /* Darker background on hover */
       color: #1b1818; /* Lighter text color on hover */
     }
     
-    /* Additional styling as needed */
+    
     
     
 

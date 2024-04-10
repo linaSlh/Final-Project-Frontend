@@ -270,8 +270,8 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
     }
     
     
-    .logo {
-        position: absolute;
+    .logo img {
+        
         width: 100px;
         height: 100px;
         top: 70px; 

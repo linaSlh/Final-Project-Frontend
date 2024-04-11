@@ -164,10 +164,10 @@ button[type="submit"]:hover {
   font-size: 30px;
 }
 .AddPost{
-  margin-top: 200px;
+  margin-top: 100px;
 }
 .PostDetails{
-  margin-top: 200px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -205,8 +205,9 @@ button[type="submit"]:hover {
   padding-left: 600px;
 }
 .AddComment{
-  padding-top: 200px;
+  padding-top:50px;
   font-size: larger;
+
 }
 .gallery {
   display: flex;

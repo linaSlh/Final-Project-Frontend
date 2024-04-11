@@ -37,9 +37,9 @@ function PostDetailsPage (props) {
 
 //added to add comment to the details page successfully
 
-const refreshPost = () => {
-  getPost();
-};
+// const refreshPost = () => {
+//   getPost();
+// };
 
 
 

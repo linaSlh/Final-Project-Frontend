@@ -67,7 +67,7 @@ html{
 .LoginPage{
   
   
-  padding-top: 200px; 
+  padding-top: 30px; 
   font-size: large;
   display: flex;
   flex-direction: column;
@@ -132,14 +132,14 @@ button[type="submit"]:hover {
 }
 .SignupPage{
   
-  padding-top: 200px; 
+  padding-top: 30px; 
   font-size: large;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  color: rgb(242, 236, 236);
+  color: rgb(46, 45, 45);
 }
 .PostListPage{
   
@@ -156,7 +156,11 @@ button[type="submit"]:hover {
   font-size: 20px;
   text-align: center;
   margin-left: 50px;
-  padding: 60px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+
 }
 .PostCard a {
   color: black;

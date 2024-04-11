@@ -178,27 +178,18 @@ button[type="submit"]:hover {
   
 
 .PostDetails button {
-/* padding: 20px; */
-font-size: larger;
-color: black;
-text-decoration: none;
-margin-left: 20px; /* Adjust spacing between links */
-margin-right: 20px;
-margin-bottom: 20px;
-border: none;
-background: none;
-cursor: pointer;
-border: 2px solid #f1d70e; 
- 
-border-radius: 10px; 
-transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease; 
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(76, 72, 72);; /* White borders */
+  border-radius: 5px; /* Rounded corners */
+  background-color: transparent; /* Transparent background */
+  color: rgb(76, 72, 72);;
+  cursor: pointer;
+  outline: none; /* Remove default outline */ 
 }
 .PostDetails  button:hover {
-  color: #f1d70e; 
-  border: 2px solid #f1d70e; 
-  padding: 8px 12px; 
-  border-radius: 10px; 
-  
+  background-color: rgb(76, 72, 72);;
+  color:white;
 }
 
 .PostDetails P {
@@ -310,7 +301,7 @@ transition: color 0.3s ease, padding 0.3s ease, border 0.3s ease;
       background-color: #c5c3c3; /* Darker background on hover */
       color: #1b1818; /* Lighter text color on hover */
     }
-    
+   
     
     
     

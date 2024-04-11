@@ -48,18 +48,15 @@ function PostDetailsPage (props) {
       {post && (
         <>
           <h1>{post.title}</h1>
-          <h1>{post.author}</h1>
-          <p>{post.content}</p>
+          <h4>written by : {post.author}</h4>
+          <h2>{post.content}</h2>
         </>
       )}
-       <AddComment refreshPost={getPost} postId={postId} />          
 
-      { post && post.comments && post.comments.map((comment) => <CommentCard key={comment._id} {...comment} /> )}  
      
-     
-      <div>
+      {/* <div>
         <h1>More details about the trip</h1>
-      </div>
+      </div> */}
       <Link to={`/posts/${postId}/comments`}>
       <button>Add comment</button>
       </Link>
@@ -70,6 +67,11 @@ function PostDetailsPage (props) {
       <Link to={`/posts/edit/${postId}`}>
         <button>Edit Post</button>
       </Link>
+
+
+      <AddComment refreshPost={getPost} postId={postId} />          
+
+{ post && post.comments && post.comments.map((comment) => <CommentCard key={comment._id} {...comment} /> )}  
 
     </div>
   );
